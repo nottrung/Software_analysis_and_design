@@ -89,12 +89,13 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 20px 80px;
-  background: #E3E6F3;
+  background: #d3c5b3;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
   z-index: 999;
   position: sticky; /* tách cái thanh công cụ với cái nên bên dưới */
   top: 0;
   left: 0;
+  background: linear-gradient(45deg, #edebeb, #d3c5b3);
 }
 #navbar{
   display: flex;
@@ -103,7 +104,7 @@ body {
 }
 #navbar li{
   list-style: none;
-  padding: 0 20px;
+  padding: 0 30px;
   position: relative;
 }
 #navbar li a{
@@ -131,22 +132,30 @@ body {
         /****** Home Page ******/
 
 #hero{
-  background-image: url("img/hero4.png");
+  background-image: url("img/logo8.webp");
   height: 90vh;
   width: 100%;
   background-size: cover;
-  background-position: top 25% right 0;
-  padding: 0 80px;
+  background-position: top 0 right 80%;
+  padding: 0 150px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
 }
-#hero h4{
+#hero h3{
   padding-bottom: 15px;
+  font-size: 20px;
 }
 #hero h1{
+  padding: 10px 0 10px 0;
   color: #088178;
+  font-size: 70px;
+}
+#hero p{
+  color: rgb(245, 102, 46);
+  font-weight: bold;
+  font-size: 20px;
 }
 #hero button{
   background-image: url("img/button.png");
@@ -277,6 +286,24 @@ body {
   position: 20px;
   right: 10px;
 }
+#product1 .xemThem button{
+  font-size: 15px;
+  padding: 10px;
+  border-radius: 7px;
+  margin: 10px;
+  border: 2px solid #fff;
+  color: #088178;
+  font-weight: bold;
+}
+#product1 .xemThem a:hover button{
+  text-decoration: none;
+  background-color: #088178;
+  color: #fff;
+}
+
+
+
+
 
 
 #banner{
@@ -356,7 +383,7 @@ body {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding: 0 80px;
+  padding: 0 ;
 }
 #banner3 .banner-box{
   display: flex;
@@ -478,4 +505,4 @@ footer a:hover{
 }
 
 
-
+        
