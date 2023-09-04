@@ -94,7 +94,7 @@ body {
   background: #d3c5b3;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
   z-index: 999;
-  position: sticky; /* tách cái thanh công cụ với cái nên bên dưới */
+  position: sticky;
   top: 0;
   left: 0;
   background: linear-gradient(45deg, #f5f1de, #c0a98c);
@@ -130,7 +130,7 @@ body {
   width: 30%;
   height: 2px;
   background: #088178;
-  /* position: absolute; */ /*gạch chân dưới các chữ trên thanh cong cụ*/
+  /* position: absolute; */ 
   bottom: -4px;
   left: 20px;
 }
@@ -170,8 +170,8 @@ body {
   border: 0;
   padding: 14px 80px 14px 65px;
   background-repeat: no-repeat;
-  font-weight: 700; /* độ đậm chữ "Shop Now" */
-  font-size: 20px; /* độ lớn chữ "Shop Now" */
+  font-weight: 700; 
+  font-size: 20px; 
   
 }
 #hero .shopNow:hover{
@@ -190,8 +190,8 @@ body {
   text-align : center;
   padding: 25px 15px;
   box-shadow: 20px 20px 34px rgba(0,0,0, 0.03);
-  border: 1px solid #cce7d0; /* phần đậm nhạt của viền box */
-  border-radius: 5px; /* bo cạnh */
+  border: 1px solid #cce7d0;
+  border-radius: 5px; 
   margin-bottom: 10px;
 }
 #feature .fe-box:hover{
