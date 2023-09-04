@@ -3,7 +3,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  position: relative;
   font-family: "Spartan", sans-serif;
+  /* font-family: "futura-pt",sans-serif; */
 }
 
 html {
@@ -95,7 +97,7 @@ body {
   position: sticky; /* tách cái thanh công cụ với cái nên bên dưới */
   top: 0;
   left: 0;
-  background: linear-gradient(45deg, #edebeb, #d3c5b3);
+  background: linear-gradient(45deg, #f5f1de, #c0a98c);
 }
 #navbar{
   display: flex;
@@ -104,27 +106,31 @@ body {
 }
 #navbar li{
   list-style: none;
-  padding: 0 30px;
+  padding: 0 25px;
   position: relative;
 }
 #navbar li a{
   text-decoration: none;
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 600;
   color: #1a1a1a;
-  transition: 0.3s ease;
+  transition: 0.25s ease;
 }
 #navbar li a:hover, 
 #navbar li a.active{
-  color: #088178;
+  background-color: rgb(5, 115, 5);
+  color: #fff;
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 16px;
 }
 #navbar li a.active::after,
-#navbar li a:hover::after{ /*gạch chân dưới các chữ trên thanh cong cụ*/
+#navbar li a:hover::after{ 
   content: "";
   width: 30%;
   height: 2px;
   background: #088178;
-  position: absolute;
+  /* position: absolute; */ /*gạch chân dưới các chữ trên thanh cong cụ*/
   bottom: -4px;
   left: 20px;
 }
@@ -149,7 +155,7 @@ body {
 }
 #hero h1{
   padding: 10px 0 10px 0;
-  color: #088178;
+  color: rgb(5, 115, 5);
   font-size: 70px;
 }
 #hero p{
@@ -160,7 +166,7 @@ body {
 #hero button{
   background-image: url("img/button.png");
   background-color: transparent;
-  color: green;
+  color: rgb(5, 115, 5);
   border: 0;
   padding: 14px 80px 14px 65px;
   background-repeat: no-repeat;
@@ -200,23 +206,23 @@ body {
   padding: 9px 8px 6px 8px;
   line-height: 1;
   border-radius: 4px;
-  color: #088178;
-  background-color: #fdded4;
+  color: rgb(0, 109, 0);
+  background-color: #f1b49f;
 }
 #feature .fe-box:nth-child(2) h6{
-  background-color: #cdebbc;
+  background-color: #b1de97;
 }
 #feature .fe-box:nth-child(3) h6{
-  background-color: #d1e8f2;
+  background-color: #abd3e4;
 }
 #feature .fe-box:nth-child(4) h6{
-  background-color: #cdd4f8;
+  background-color: #a0aae1;
 }
 #feature .fe-box:nth-child(5) h6{
-  background-color: #f6dbf6;
+  background-color: #e6b7e6;
 }
 #feature .fe-box:nth-child(6) h6{
-  background-color: #fff2e5;
+  background-color: #f5cca2;
 }
 
 
@@ -233,7 +239,7 @@ body {
   width: 23%;
   min-width: 250px;
   padding: 10px 12px;
-  border: 1px solid #cce7d0;
+  border: 1px solid #c6eecc;
   border-radius: 25px;
   cursor: pointer;
   box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
@@ -272,7 +278,7 @@ body {
   padding-top: 7px;
   font-size: 15px;
   font-weight: 700;
-  color: #088178;
+  color: rgb(5, 115, 5);
 }
 #product1 .pro .cart{
   width: 40px;
@@ -281,29 +287,27 @@ body {
   border-radius: 50px;
   background-color: #e8f6ea;
   font-weight: 500;
-  color: #088178;
+  color: rgb(5, 115, 5);
   border: 1px soild #cce7d0;
   position: 20px;
   right: 10px;
 }
 #product1 .xemThem button{
-  font-size: 15px;
+  font-size: 18px;
   padding: 10px;
   border-radius: 7px;
-  margin: 10px;
-  border: 2px solid #fff;
-  color: #088178;
+  margin: 12px;
+  border: 3px solid #000000;
+  border-radius: 12px 0;
+  color: #000000;
   font-weight: bold;
 }
 #product1 .xemThem a:hover button{
   text-decoration: none;
-  background-color: #088178;
+  background-color: rgb(247, 144, 19);
+  border-color: rgb(247, 144, 19);
   color: #fff;
 }
-
-
-
-
 
 
 #banner{
@@ -312,61 +316,65 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-image: url(img/banner/b2.jpg);
+  /* background-image: url(img/banner/b2.jpg); */
+  background-image:  linear-gradient(45deg, #f1bed1, #f3db86);
   width: 100%;
   height: 40vh;
   background-size: cover;
   background-position: center;
 }
 #banner h4{
-  color: #fff;
-  font-size: 16px;
+  color: #000000;
+  font-size: 20px;
+  padding-bottom: 20px;
 }
 #banner h2{
-  color: #fff;
-  font-size: 30px;
+  color: #000000;
+  font-size: 35px;
   padding: 10px 0;
 }
 #banner h2 span{
   color: rgb(203, 26, 26);
 }
-#banner button:hover{
-  background: #088178;
-  color: #fff;
-}
 
 
-#sm-banner {
+#sm-banner{
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
-  margin: 10px;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 30px;
 }
 #sm-banner .banner-box{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  background-image: url("img/banner/b17.jpg");
-  min-width: 700px;
-  height: 50vh;
   background-size: cover;
   background-position: center;
-  padding: 50px;
+  padding-left: 160px;
 }
 #sm-banner .banner-box2{
-  background-image: url("img/banner/b10.jpg");
+  padding-right: 160px;
 }
-#sm-banner h4{
-  color: #fff;
-  font-size: 20px;
-  font-weight: 300;
+#sm-banner img{
+  width: 460px;
+  border: 8px solid orange;
+  border-top-color: greenyellow;
+  border-right-color: lightblue;
+  border-bottom-color: lightpink;
 }
-#sm-banner h2{
-  color: #fff;
-  font-size: 28px;
-  font-weight: 800;
+#sm-banner .banner-box h3{
+  padding-top: 15px;
+  padding-left: 130px;
+  font-size: 25px;
 }
+#sm-banner .banner-box2 h3{
+  padding-left: 110px;
+}
+
+
+
 #sm-banner span{
   color: #fff;
   font-size: 14px;
@@ -374,8 +382,8 @@ body {
   padding-bottom: 15px;
 }
 #sm-banner .banner-box:hover button{
-  background: #088178;
-  border: 1px solid #088178;
+  background: rgb(5, 115, 5);
+  border: 1px solid rgb(5, 115, 5);
 }
 
 
@@ -455,7 +463,7 @@ body {
   border-bottom-right-radius: 0;
 }
 #newsletter button{
-  background-color: #088178;
+  background-color: rgb(5, 115, 5);
   color: #fff;
   white-space: nowrap;
   border-top-left-radius: 0;
@@ -476,16 +484,16 @@ footer .col{
 }
 footer a{
   text-decoration: none;
-  font-size: 16px;
+  font-size: 14px;
   color: #222;
   margin-bottom: 10px;
 }
 footer h4{
-  font-size: 20px;
+  font-size: 18px;
   padding-bottom: 20px;
 }
 footer p{
-  font-size: 16px;
+  font-size: 14px;
   margin: 0 0 8px 0;
 }
 footer .follow i{
@@ -495,14 +503,142 @@ footer .follow i{
   font-size: 25px;
 }
 footer .install .row img{
-  border: 1px solid #088178;
+  border: 1px solid rgb(5, 115, 5);
   border-radius: 6px;
   margin: 10px 0 15px 0;
 }
 footer .follow i:hover,
 footer a:hover{
-  color: #088178;
+  color: rgb(5, 115, 5);
 }
 
 
-        
+          /****** SHOP PAGE ******/
+
+
+
+          /****** ABOUT PAGE ******/
+#page-header .about-header{
+  background-image: url("img/about/banner.png");
+}
+#about-head{
+  display: flex;
+  align-content:  center;
+}
+#about-head img{
+  width: 50%;
+}
+#about-head div{
+  padding: 70px 0 0 40px;
+  text-align: justify;
+}
+#about-app{
+  text-align: center;
+}
+#about-app .video{
+  width: 70%;
+  height: 100%;
+  margin: 30px auto 0 auto;
+}
+#about-app .video video{
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+
+                /****** CONTACT PAGE ******/
+#contact-details{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#contact-details .details{
+  width: 45%;
+}
+#contact-details .details span,
+#form-details form span{
+  font-size: 14px;
+}
+#contact-details .details h2, 
+#form-details form h2{
+  font-size: 30px;
+  line-height: 35px;
+  padding: 20px 0;
+}
+#contact-details .details h3{
+  font-size: 20px;
+  padding-bottom: 15px;
+  padding-left: 50px;
+}
+#contact-details .details li{
+  list-style: none;
+  display: flex;
+  padding: 10px 0;
+  padding-left: 50px;
+}
+#contact-details .details li i{
+  font-size:  16px;
+  padding-right: 22px;
+}
+#contact-details .details li p{
+  margin: 0;
+  font-size: 15px;
+}
+#contact-details .map{
+  width:  55%;
+  height: 400px;
+}
+#contact-details .map iframe{
+  width: 100%;
+  height: 100%;
+}
+
+#form-details{
+  display: flex;
+  justify-content: space-between;
+  margin: 30px;
+  padding: 80px;
+  border: 1px solid #e1e1e1;
+}
+#form-details form{
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+#form-details form input, 
+#form-details form textarea{
+  width: 100%;
+  padding: 12px 15px;
+  outline: none;
+  margin-bottom: 20px;
+  border: 1px solid lightgray
+}
+#form-details form button{
+  background-color: rgb(5, 115, 5);
+  color: #fff; 
+}
+#form-details .people div{
+  padding-bottom: 25px;
+  display: flex;
+  align-items: flex-start;
+  margin-top: 50px;
+}
+#form-details .people div img{
+  width: 65px;
+  height: 65px;
+  object-fit: cover;
+  margin-right: 15px;
+}
+#form-details .people div p{
+  margin: 0;
+  font-size: 15px;
+  line-height: 25px;
+}
+#form-details .people div p span{
+  display: flex;
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+}
