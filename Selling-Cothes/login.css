@@ -5,7 +5,7 @@
 }
 
 body {
-    background: radial-gradient(circle farthest-side, #fceabb,#f8b500);
+    background: radial-gradient(ellipse at top, #e66465, transparent),radial-gradient(ellipse at bottom, #4d9f0c, transparent);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -163,7 +163,7 @@ input {
 }
 
 .overlay {
-    background: radial-gradient(circle farthest-side, #fceabb,#f8b500);
+    background: linear-gradient(45deg, #e65adc,#eab329);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 0 0;
