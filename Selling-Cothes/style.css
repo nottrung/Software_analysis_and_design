@@ -1367,7 +1367,6 @@ width: 40px;
 
 /* CSS cho input và nút thêm */
 input, button {
-  display: block;
   margin: 10px 0;
 }
 
