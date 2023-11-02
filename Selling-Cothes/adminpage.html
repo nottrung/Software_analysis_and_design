@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Aadmin page</title>
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+        <link rel="stylesheet" href="style.css">
+        <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    </head>
+
+    <body>
+        <div id = "header"> 
+            <img src="img/logo4.png" alt="">
+            <div>
+                <ul id = "navbar">
+                    <li id="lg_bag"><a href="admincart.html"><i class="far fa-shopping-bag"></i></a></li>
+                    <div class="dropdown">
+                        <li><a class="active"><i class="far fa-regular fa-user"></i></a></li>
+                        <div class="dropdown-content">
+                            <a href="adminpage.html">admin</a>
+                            <a href="login.html">log out</a>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+        </div>
+
+        <div id="adminPage">
+           <div class="qly">
+                <div class="menu">
+                    <div id="sp">Sản phẩm</div>
+                    <div id="tk">Thống kê</div>
+                </div>
+                <div class="hidden">
+                    <div class="sanPham pro-sp">
+                        <div class="them"><p>thêm</p></div>
+                        <div id="myModal" class="modal">
+                            <div class="modal-content">
+                                <span class="close">&times;</span>
+                                <label for="">Mã sản phẩm</label>
+                                <input type="text" id="maSanPham" placeholder="Mã sản phẩm">
+                                <label for="">Tên sản phẩm</label>
+                                <input type="text" id="tenSanPham" placeholder="Tên sản phẩm">
+                                <label for="">Giá sản phẩm</label>
+                                <input type="text" id="gia" placeholder="Giá">
+                                <label for="">Ảnh sản phẩm</label>
+                                <input type="file" name="" id="anh" placeholder="URL ảnh">
+                                <div class="themsp"><button id="themSanPham">Thêm</button></div>
+                            </div>
+                        </div>
+                        <table  width="1000" cellspacing="0">
+                            <tr class="thuocTinh">
+                                <td>Ảnh sản phẩm</td>
+                                <td>Mã sản phẩm</td>
+                                <td>Tên sản phẩm</td>
+                                <td>Giá</td>
+                                <td>Thao tác</td>
+                            </tr>
+                            <tr>
+                                <td><img src="img/products/n1.jpg" alt=""></td>
+                                <td>A01</td>
+                                <td>Áo sơ mi</td>
+                                <td>10$</td>
+                                <td class="sua">
+                                    <div class="capnhat" onclick="hienThiModal()">cập nhật</div>
+                                    <div id="spModal" class="modal">
+                                        <div class="modal-content">
+                                            <span class="close" onclick="dongModal()">&times;</span>
+                                            <label for="">Mã sản phẩm</label>
+                                            <input type="text" id="maSanPham" value="A01">
+                                            <label for="">Tên sản phẩm</label>
+                                            <input type="text" id="tenSanPham" value="Áo sơ mi">
+                                            <label for="">Giá sản phẩm</label>
+                                            <input type="text" id="gia" value="10$">
+                                            <label for="">Ảnh sản phẩm</label>
+                                            <input type="file" name="" id="anh" placeholder="URL ảnh">
+                                            <div class="capnhatsp">
+                                                <button id="suasp">Sửa</button>
+                                                <button id="xoasp">xóa</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="img/products/n2.jpg" alt=""></td>
+                                <td>A02</td>
+                                <td>Áo sơ mi</td>
+                                <td>12$</td>
+                                <td class="sua">
+                                    <div class="capnhat" onclick="hienThiModal()">cập nhật</div>
+                                    <div id="spModal" class="modal">
+                                        <div class="modal-content">
+                                            <span class="close" onclick="dongModal()">&times;</span>
+                                            <label for="">Mã sản phẩm</label>
+                                            <input type="text" id="maSanPham" value="A02">
+                                            <label for="">Tên sản phẩm</label>
+                                            <input type="text" id="tenSanPham" value="Áo sơ mi">
+                                            <label for="">Giá sản phẩm</label>
+                                            <input type="text" id="gia" value="12$">
+                                            <label for="">Ảnh sản phẩm</label>
+                                            <input type="file" name="" id="anh" placeholder="URL ảnh">
+                                            <div class="capnhatsp">
+                                                <button id="suasp">Sửa</button>
+                                                <button id="xoasp">xóa</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="img/products/n3.jpg" alt=""></td>
+                                <td>A03</td>
+                                <td>Áo sơ mi</td>
+                                <td>7$</td>
+                                <td class="sua">
+                                    <div class="capnhat" onclick="hienThiModal()">cập nhật</div>
+                                    <div id="spModal" class="modal">
+                                        <div class="modal-content">
+                                            <span class="close" onclick="dongModal()">&times;</span>
+                                            <label for="">Mã sản phẩm</label>
+                                            <input type="text" id="maSanPham" value="A03">
+                                            <label for="">Tên sản phẩm</label>
+                                            <input type="text" id="tenSanPham" value="Áo sơ mi">
+                                            <label for="">Giá sản phẩm</label>
+                                            <input type="text" id="gia" value="7$">
+                                            <label for="">Ảnh sản phẩm</label>
+                                            <input type="file" name="" id="anh" placeholder="URL ảnh">
+                                            <div class="capnhatsp">
+                                                <button id="suasp">Sửa</button>
+                                                <button id="xoasp">xóa</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="img/products/n4.jpg" alt=""></td>
+                                <td>A04</td>
+                                <td>Áo sơ mi cộc tay</td>
+                                <td>7$</td>
+                                <td class="sua">
+                                    <div class="capnhat" onclick="hienThiModal()">cập nhật</div>
+                                    <div id="spModal" class="modal">
+                                        <div class="modal-content">
+                                            <span class="close" onclick="dongModal()">&times;</span>
+                                            <label for="">Mã sản phẩm</label>
+                                            <input type="text" id="maSanPham" value="A04">
+                                            <label for="">Tên sản phẩm</label>
+                                            <input type="text" id="tenSanPham" value="Áo sơ mi cộc tay">
+                                            <label for="">Giá sản phẩm</label>
+                                            <input type="text" id="gia" value="7$">
+                                            <label for="">Ảnh sản phẩm</label>
+                                            <input type="file" name="" id="anh" placeholder="URL ảnh">
+                                            <div class="capnhatsp">
+                                                <button id="suasp">Sửa</button>
+                                                <button id="xoasp">xóa</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="img/products/sp01_main.jfif" alt=""></td>
+                                <td>A05</td>
+                                <td>Áo Teelab</td>
+                                <td>175.000đ</td>
+                                <td class="sua">
+                                    <div class="capnhat" onclick="hienThiModal()">cập nhật</div>
+                                    <div id="spModal" class="modal">
+                                        <div class="modal-content">
+                                            <span class="close" onclick="dongModal()">&times;</span>
+                                            <label for="">Mã sản phẩm</label>
+                                            <input type="text" id="maSanPham" value="A05">
+                                            <label for="">Tên sản phẩm</label>
+                                            <input type="text" id="tenSanPham" value="Áo Teelab">
+                                            <label for="">Giá sản phẩm</label>
+                                            <input type="text" id="gia" value="175.000đ">
+                                            <label for="">Ảnh sản phẩm</label>
+                                            <input type="file" name="" id="anh" placeholder="URL ảnh">
+                                            <div class="capnhatsp">
+                                                <button id="suasp">Sửa</button>
+                                                <button id="xoasp">xóa</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="thongKe pro-tk">
+                        <div>
+                            <p><span>8</span> <br> Sản phẩm</p>
+                            <i class='bx bxl-product-hunt'></i>
+                        </div>
+                        <div class="donhang">
+                            <p><span>24</span> <br> đơn hàng</p>
+                            <i class='bx bxs-cart' ></i>
+                        </div>
+                        <div>
+                            <p><span>5000<br> 000</span><br>VND <br>tổng tiền</p>
+                            <i class='bx bx-money'></i>
+                        </div>
+                    </div>
+                </div>
+           </div>
+
+
+        </div>
+
+        <script>
+            document.body.onload = function(){
+                hideAllcontent();
+            
+                document.querySelector('.pro-sp').style.display = 'block';
+                function hideAllcontent(){
+                    contents = document.querySelectorAll('.hidden>div');
+                    contents.forEach(function(element){
+                        element.style.display = 'none';
+                    });
+                }
+            
+                menuitems = document.querySelectorAll('.menu>div');
+                menuitems.forEach(function(element){
+                    element.onclick = function(){
+                        hideAllcontent();
+                        document.querySelector('.pro-'+ this.id).style.display = 'block'
+                    }
+                });
+            }
+
+            // Lấy các phần tử DOM cần sử dụng
+            var themButton = document.querySelector('.them');
+            var modal = document.getElementById('myModal');
+            var closeButton = document.querySelector('.close');
+            var themSanPhamButton = document.getElementById('themSanPham');
+            var suaSanPhamButton = document.getElementById('suasp');
+            var xoaSanPhamButton = document.getElementById('xoasp');
+            var spmodal = document.getElementById('spModal');
+
+            // Bắt sự kiện khi click vào "Thêm"
+            themButton.addEventListener('click', function() {
+                modal.style.display = 'block';
+            });
+
+            // Bắt sự kiện khi click vào nút đóng
+            closeButton.addEventListener('click', function() {
+                modal.style.display = 'none';
+            });
+
+            // Bắt sự kiện khi click vào nút "Thêm sản phẩm"
+            themSanPhamButton.addEventListener('click', function() {
+                modal.style.display = 'none';
+                alert('Thêm sản phẩm thành công');
+            });
+
+            suaSanPhamButton.addEventListener('click', function() {
+                spmodal.style.display = 'none';
+                alert('Sửa sản phẩm thành công');
+            });
+
+            xoaSanPhamButton.addEventListener('click', function() {
+                spmodal.style.display = 'none';
+                alert('Xóa sản phẩm thành công');
+            });
+
+            function hienThiModal() {
+                spmodal.style.display = 'block';
+            }
+
+            function dongModal() {
+                spmodal.style.display = 'none';
+            }
+        </script>
+    </body>
+</html>

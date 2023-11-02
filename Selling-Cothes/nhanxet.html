@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Đánh giá</title>
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <section id = "header"> 
+            <a href="index.html"> <img src="img/logo4.png" alt=""> </a>
+            <div>
+                <ul id = "navbar">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="cart.html"><i class="far fa-shopping-bag"></i></a></li>
+                    <div class="dropdown">
+                        <li><a class="active"><i class="far fa-regular fa-user"></i></a></li>
+                        <div class="dropdown-content">
+                            <a href="nhanxet.html">Đánh giá</a>
+                            <a href="Account.html">view profile</a>
+                            <a href="login.html">log out</a>
+                        </div>
+                    </div>                
+                </ul>
+            </div>
+        </section>
+
+        <section id="danhgia" class="section-p1">
+            <h4>ĐÁNH GIÁ</h4>
+            <div class="vietdanhgia">
+                <div class="ndspham">
+                    <img src="img/products/sp01_main.jfif" alt="">
+                    <p>UNISEX's FashionT-Shirt Teelab</p>
+                </div>
+                <div class="nddanhgia">
+                    <div class="star">
+                        <i class='bx bx-star' style='color:#f3b519' onclick="toggleStar(this)"></i>
+                        <i class='bx bx-star' style='color:#f3b519' onclick="toggleStar(this)"></i>
+                        <i class='bx bx-star' style='color:#f3b519' onclick="toggleStar(this)"></i>
+                        <i class='bx bx-star' style='color:#f3b519' onclick="toggleStar(this)"></i>
+                        <i class='bx bx-star' style='color:#f3b519' onclick="toggleStar(this)"></i>
+                    </div>
+                    <div class="ndung">
+                        <textarea name="" id="" cols="100" rows="10" placeholder="nội dung nhận xét(không quá 1000 kí tự)"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="nutxn">
+                <button type="submit" class="xndg" onclick="danhgia()">ĐĂNG ĐÁNH GIÁ</button>
+            </div>
+        </section>
+
+        <section id ="newsletter" class="section-p1">
+        </section>
+
+        <footer class="section-p1">
+            <div class="col">
+                <h4>Contact</h4>
+                <p><strong>Address: </strong> P. Nguyễn Trác, Yên Nghĩa, Hà Đông, Hà Nội</p>
+                <p><strong>Hours: </strong> 9:00 am - 22:00 pm, Mon - Sun</p>
+                <div class="follow">
+                    <h4>Follow us</h4>
+                    <div class="icon">
+                       <a href="https://www.facebook.com/quanghuy010403/"><i class="fab fa-facebook"></i></a>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-pinterest-p"></i>
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <h4>About</h4>
+                <a href="#">About us</a>
+                <a href="#">Delivey Information</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <div class="col">
+                <h4>My Account</h4>
+                <a href="#">Sign In</a>
+                <a href="#">View Cart</a>
+                <a href="#">My Wishlist</a>
+                <a href="#">Track My Order</a>
+                <a href="#">Help</a>
+            </div>
+            <div class="col install">
+                <h4>About</h4>
+                <p>From App Store or Google Play</p>
+                <div class="row">
+                    <a href="https://www.apple.com/vn/store"><img src="img/pay/app.jpg" alt=""></a>
+                    <a href="https://play.google.com/store/apps?gl=us"><img src="img/pay/play.jpg" alt=""></a>
+                </div>
+                <p>Secured Payment Gateways</p>
+                <img src="img/pay/pay.png" alt="">
+            </div>
+        </footer>
+
+        <script src="script.js"></script>
+        <script>
+            function toggleStar(starElement) 
+            {
+                // Kiểm tra xem biểu tượng sao đang có lớp 'bxs-star' hay không
+                if (starElement.classList.contains('bxs-star')) {
+                    // Nếu có, chuyển về lớp 'bx-star'
+                    starElement.classList.remove('bxs-star');
+                    starElement.classList.add('bx-star');
+                } else {
+                    // Nếu không, chuyển về lớp 'bxs-star'
+                    starElement.classList.remove('bx-star');
+                    starElement.classList.add('bxs-star');
+                }
+            }
+
+            function danhgia()
+            {
+                alert('danh gia thanh cong');
+            }
+
+        </script>
+    </body>
+</html>

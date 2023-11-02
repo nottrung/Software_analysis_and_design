@@ -16,17 +16,18 @@
             <div>
                 <ul id = "navbar">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="shop.html">Shop</a></li>
+                    <li><a  href="shop.html">Shop</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="cart.html"><i class="far fa-shopping-bag"></i></a></li>
                     <div class="dropdown">
                         <li><a class="active"><i class="far fa-regular fa-user"></i></a></li>
                         <div class="dropdown-content">
+                            <a href="nhanxet.html">Đánh giá</a>
                             <a href="Account.html">view profile</a>
                             <a href="login.html">log out</a>
                         </div>
-                    </div>
+                    </div>                
                 </ul>
             </div>
         </section>
@@ -38,70 +39,77 @@
                     <table>
                         <tr>
                             <td><p class="p1">Full name</p></td>
-                            <td><input type="text" name="oten" id="oten" placeholder="ho va ten" readonly></td>
+                            <td><input type="text" name="oten" id="oten" readonly value="Nguyen Van A"></td>
                         </tr>
                         <tr>
                             <td><p class="p1">Date of birth</p></td>
-                            <td><input type="text" name="ons" id="ons" placeholder="ngay sinh" readonly></td>
+                            <td><input type="text" name="ons" id="ons" placeholder="ngay sinh" readonly value="01/01/1010"></td>
                         </tr>
                         <tr>
                             <td><p class="p1">Phone number</p></td>
-                            <td><input type="text" name="osdt" id="osdt" placeholder="so dien thoai" readonly></td>
+                            <td><input type="text" name="osdt" id="osdt" placeholder="so dien thoai" readonly value="09876543211"></td>
                         </tr>
                         <tr>
                             <td><p class="p1">Gender</p></td>
-                            <td><input type="text" name="ogt" id="ogt" placeholder="gioi tinh" readonly></td>
+                            <td><input type="text" name="ogt" id="ogt" placeholder="gioi tinh" readonly value="Female"></td>
                         </tr>
                         <tr>
                             <td><p class="p1">Address</p></td>
-                            <td><input type="text" name="odc" id="odc" placeholder="dia chi" readonly></td>
+                            <td><input type="text" name="odc" id="odc" placeholder="dia chi" readonly value="Ha Noi"></td>
                         </tr>
                     </table>
                 </div>
                 <a href="#" id="openModalLink" class="openModalLink">Update Information</a>
                 
-                <div class="modal" id="myModal">
-                    
+                <div class="modal" id="myModal">  
                     <div class="modal-content">
                         <a href="" class="rt"><i class="far fa-times-circle"></i></a>
                         <h4>Update information</h4>
                         <table>
                             <tr>
                                 <td><p class="p1">Full name</p></td>
-                                <td><input type="text" name="oten" id="oten" placeholder="ho va ten"></td>
+                                <td><input type="text" name="oten" id="oten" value="Nguyen Van A"></td>
                             </tr>
                             <tr>
                                 <td><p class="p1">Date of birth</p></td>
-                                <td><input type="text" name="ons" id="ons" placeholder="ngay sinh"></td>
+                                <td><input type="date" name="ons" id="ons" placeholder="ngay sinh" value="01/01/1010"></td>
                             </tr>
                             <tr>
                                 <td><p class="p1">Phone number</p></td>
-                                <td><input type="text" name="osdt" id="osdt" placeholder="so dien thoai"></td>
+                                <td><input type="text" name="osdt" id="osdt" placeholder="so dien thoai" value="09876543211"></td>
                             </tr>
                             <tr>
                                 <td><p class="p1">Gender</p></td>
-                                <td><input type="text" name="ogt" id="ogt" placeholder="gioi tinh"></td>
+                                <td><input type="text" name="ogt" id="ogt" placeholder="gioi tinh" value="Female"></td>
                             </tr>
                             <tr>
                                 <td><p class="p1">Address</p></td>
-                                <td><input type="text" name="odc" id="odc" placeholder="dia chi"></td>
+                                <td><input type="text" name="odc" id="odc" placeholder="dia chi" value="Ha Noi"></td>
                             </tr>
                         </table>
-                        <button type="button" class="closeModalBtn" >Update</button>
+                        <button type="button" class="closeModalBtn" onclick="update()">Update</button>
                     </div>
                 </div>
             </form>
         </section>
+
+        
+
         <script>
             // hien thi phan cap nhat thong tin
             const openModalLink = document.getElementById('openModalLink');
             const modal = document.getElementById('myModal');
-            const closeModalBtn = document.getElementById('closeModalBtn');
+            const closeModalBtn = document.getElementsByClassName('closeModalBtn');
 
             openModalLink.addEventListener('click', function (e) {
                 e.preventDefault(); // Ngăn chuyển hướng khi nhấn vào liên kết
                 modal.style.display = 'block'; // Hiển thị modal
             });
+
+            function update()
+            {
+                alert('update thong tin thanh cong');
+            }
         </script>
     </body>
 </html>
